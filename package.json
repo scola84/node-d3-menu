@@ -1,0 +1,20 @@
+{
+  "name": "@scola/d3-menu",
+  "version": "0.0.0",
+  "description": "Menu",
+  "repository": "github:scola84/node-d3-menu",
+  "author": "M.C. van den Boogaart <scola@kvdb.name>",
+  "license": "MIT",
+  "main": "./dist/d3-menu.js",
+  "jsnext:main": "index.js",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup": "^0.26.3",
+    "rollup-plugin-babel": "^2.4.0",
+    "uglify-js": "^2.6.2"
+  },
+  "scripts": {
+    "build": "rollup -c -n d3_menu -o dist/d3-menu.js",
+    "build:min": "uglifyjs dist/d3-menu.js -c -m -o dist/d3-menu.min.js"
+  }
+}
