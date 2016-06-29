@@ -19,6 +19,7 @@ export default class Menu {
 
     this._root = select('body')
       .append('div')
+      .remove()
       .classed('scola menu', true)
       .styles({
         'border': '1px none #CCC',
