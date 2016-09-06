@@ -129,24 +129,24 @@ export default class Menu {
     return this;
   }
 
-  mode(mode) {
-    if (typeof mode === 'undefined') {
+  mode(value) {
+    if (typeof value === 'undefined') {
       return this._mode;
     }
 
-    this._root.style('z-index', mode === 'under' ? -1 : 1);
-    this._mode = mode;
+    this._root.style('z-index', value === 'under' ? -1 : 1);
+    this._mode = value;
 
     return this;
   }
 
-  position(position) {
-    if (typeof position === 'undefined') {
+  position(value) {
+    if (typeof value === 'undefined') {
       return this._position;
     }
 
     this._root.style(this._position, null);
-    this._position = position;
+    this._position = value;
 
     return this;
   }
