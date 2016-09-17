@@ -26,6 +26,7 @@ export default class Menu {
       .styles({
         'border': '1px none #CCC',
         'height': '100%',
+        'max-width': '85%',
         'position': 'absolute'
       });
   }
@@ -121,7 +122,7 @@ export default class Menu {
 
     this._media = this._root
       .media(`not all and (min-width: ${width})`)
-      .style('width', '90%')
+      .style('width', '85%')
       .media(`not all and (min-width: ${fixedAt})`)
       .call(() => this.unfix())
       .media(`(min-width: ${fixedAt})`)
