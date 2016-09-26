@@ -178,7 +178,7 @@ export default class Menu {
 
   fix() {
     this._root
-      .style(this._position, 0);
+      .style(this._position, '0px');
 
     this._fixed = true;
     this._visible = true;
@@ -193,8 +193,8 @@ export default class Menu {
   }
 
   unfix() {
-    this._root
-      .style(this._position, this._mode === 'under' ? 0 : '-' + this._width);
+    this._root.style(this._position,
+      this._mode === 'under' ? '0px' : '-' + this._width);
 
     this._fixed = false;
     this._visible = false;
@@ -214,7 +214,7 @@ export default class Menu {
     }
 
     if (this._mode !== 'under') {
-      this._root.transition().style(this._position, '0');
+      this._root.transition().style(this._position, '0px');
     }
 
     this._visible = true;
