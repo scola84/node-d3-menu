@@ -8,9 +8,9 @@
   "main": "./dist/d3-menu.js",
   "jsnext:main": "index.js",
   "dependencies": {
-    "@scola/d3-gesture": "^1.0.1",
-    "@scola/d3-media": "^1.0.1",
-    "@scola/d3-slider": "^1.0.1",
+    "@scola/d3-gesture": "^1.0.2",
+    "@scola/d3-media": "^1.0.2",
+    "@scola/d3-slider": "^1.0.2",
     "d3-selection": "^1.0.2",
     "d3-selection-multi": "^1.0.0",
     "d3-transition": "^1.0.2"
@@ -26,8 +26,8 @@
     "build": "npm run cleanup && npm run rollup",
     "build:min": "npm run build && npm run min",
     "cleanup": "rm -rf dist",
-    "min": "npm run min:js && gzip -9 -k dist/*",
-    "min:js": "uglifyjs dist/d3-menu.js -m -o dist/d3-menu.min.js",
-    "rollup": "rollup -c -n d3 -o dist/d3-menu.js"
+    "min": "uglifyjs dist/d3-menu.js -m -o dist/d3-menu.min.js",
+    "prepublish": "npm run build:min",
+    "rollup": "rollup -c"
   }
 }
