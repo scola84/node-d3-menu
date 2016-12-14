@@ -96,9 +96,9 @@ export default class Menu {
 
     this._gesture = this._root
       .gesture()
-      .on('tap', (event) => {
+      .on('tap', (tapEvent) => {
         if (!this._fixed) {
-          event.stopPropagation();
+          tapEvent.stopPropagation();
         }
       });
 
