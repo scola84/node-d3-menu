@@ -1,6 +1,6 @@
 {
   "name": "@scola/d3-menu",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Menu",
   "repository": "github:scola84/node-d3-menu",
   "author": "M.C. van den Boogaart <scola@kvdb.name>",
